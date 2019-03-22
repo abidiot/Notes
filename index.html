@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, user-scalable=no, maximum-scale=1.0">
+        <title>League of Legends</title>
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="styles/style.css" type="text/css" />
+    </head>
+    <body>
+        <div id="login-wrap">
+            <div id="login-header">
+                <div class="logo"></div>
+            </div>
+            <div class="panel-frame">
+                <div class="panel-content">
+                    <!--<img src="images/spinner.gif" alt="loading">-->
+                    <header>
+                        <h1>Sign In</h1>
+                    </header>
+                    <p class="message">Your username or password is incorrect. Double-check you're logging into and try again.</p>
+                    <form>
+                        <div class="Username">
+                            <label>Username</label>
+                            <input type="text" class="form-control" name="username" value="" autofocus>
+                        </div>
+                        <div class="Password">
+                            <label>Password</label>
+                            <input type="password" class="form-control" name="password" value="">
+                        </div>
+                        <div class="Remember">
+                            <!--<input type="checkbox" value="1">-->
+                            <label>
+                                <span class="checkbox-image checked"></span><span>Remember me</span>
+                            </label>
+                        </div>
+                        <div class="submit">
+                            <button id="login-button" type="submit" class="btn-primary" onclick="return false;" disabled>Sign In</button>
+                        </div>
+                        <div class="other">
+                            <a href="#">Forgot Username?</a>
+                            <a href="#">Create an account?</a>
+                        </div>
+                        <div>
+                            <label>Language</label>
+                        </div>
+                    </form>
+                </div>
+                <div class="panel-frame-border"></div>
+            </div>
+        </div>
+        <div id="login-footer">
+            <div class="logo"></div>
+            <p class="links">
+                <span><a href="https://support.riotgames.com/hc/en">Support</a> | </span>
+                <span><a href="http://na.leagueoflegends.com/en/legal/privacy">Privacy</a> | </span>
+                <span><a href="http://na.leagueoflegends.com/en/legal/termsofuse">Legal</a></span>
+            </p>
+            <p class="legal">© 2019 Riot Games, Inc. All rights reserved. League of Legends and Riot Games are trademarks, service marks, and registered trademarks of Riot Games, Inc.</p>
+        </div>
+        <script src="scripts/login.js" type="text/javascript" async></script>
+    </body>
+</html>

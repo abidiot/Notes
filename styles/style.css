@@ -1,0 +1,275 @@
+@font-face {
+    font-family: "Spiegel-Regular";
+    src: url("../fonts/Spiegel-Regular.eot");
+    src: url("../fonts/Spiegel-Regular.eot?#iefix") format('embedded-opentype'), url("../fonts/Spiegel-Regular.woff2") format('woff2'), url('../fonts/Spiegel-Regular.woff') format('woff'), url("../fonts/Spiegel-Regular.ttf") format('truetype'), url("../fonts/Spiegel-Regular.svg#Spiegel-Regular") format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+body {
+    margin: 0;
+    padding: 0;
+    background: url(../images/bg.jpg) no-repeat center top;
+    background-size: 1920px 1080px;
+    background-color: black;
+    min-height: 1080px;
+    word-break: keep-all;
+    letter-spacing: 0;
+    font-size: 16px;
+    font-family: "Spiegel-Regular";
+}
+#login-wrap {
+    margin: 2em auto 2em;
+    max-width: 400px;
+    overflow: hidden;
+}
+#login-header {
+    margin: 2em 0;
+}
+#login-header > .logo {
+    background: url(../images/lol_logo.png) no-repeat center center;
+    width: 240px;
+    height: 100px;
+    margin: auto;
+}
+.panel-frame {
+    margin: 1em auto;
+    padding: 24px;
+    position: relative;
+    background-color: black;
+    border: 2px solid transparent;
+    border-image: linear-gradient(to top,#614a1f 0,#463714 5px,#463714 100%) 1 stretch;
+    border-color: #463714;
+}
+.panel-content {
+    min-height: 500px;/*test*/
+}
+.panel-frame .panel-frame-border::before {
+    top: -6px;
+    border-image-source: url(../images/sup-border.png);
+}
+.panel-frame .panel-frame-border::after {
+    bottom: -6px;
+    border-image-source: url(../images/sub-border.png);
+}
+.panel-frame .panel-frame-border::before, 
+.panel-frame .panel-frame-border::after {
+    content: '';
+    position: absolute;
+    left: 12px;
+    right: 12px;
+    height: 0;
+    border-width: 4px 4px 0 4px;
+    border-image-width: 4px 4px 0 4px;
+    border-image-slice: 4 4 0 4;
+    border-image-repeat: stretch;
+    border-style: solid;
+    border-color: transparent;
+}
+#login-footer {
+    position: relative;
+    width: 400px;
+    margin: 200px auto 1em;
+    padding: 16px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+#login-footer > .logo {
+    background: url(../images/riot-logo.png) no-repeat center center;
+    background-size: 74px auto;
+    width: 74px;
+    height: 58px;
+    position: absolute;
+    top: 16px;
+    left: 16px;
+}
+#login-footer > .links {
+    color: #cdbe91;
+    font-size: 0.75em;
+    line-height: 1.5;
+}
+#login-footer > .links a {
+    color: #cdbe91;
+    text-decoration: none;
+}
+#login-footer > .links a:hover {
+    text-decoration: underline;
+}
+#login-footer > p {
+    margin: 0;
+    margin-left: 90px;
+}
+#login-footer > .legal {
+    color: #5b5a56;
+    font-size: 0.625em;
+    line-height: 1.5;
+}
+@media screen and (max-width: 640px) {
+    body {
+        background: url(../images/bg-samll.jpg) no-repeat center top;
+        background-size: 640px 360px;
+        background-color: black;
+        min-height: 0;
+    }
+    #login-wrap {
+        margin: 1em auto;
+        max-width: none;
+        width: calc(100% - 40px);
+    }
+    #login-footer {
+        width: calc(100% - 40px);
+        margin: 1em auto;
+        padding: 1em;
+    }
+    #login-footer > .logo {
+        top: 1em;
+        left: 1em;
+    }
+    #login-footer > p {
+        margin-left: calc(1em + 74px);
+    }
+}
+/*img[alt=loading] {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 30px;
+    height: auto;
+    margin: -15px 0 0 -15px; 
+    z-index: 1;
+}*/
+.panel-content > header {
+    margin-bottom: 12px;
+}
+.panel-content > header > h1 {
+    -webkit-font-smoothing: antialiased;
+    font-size: 24px;
+    color: #f0e6d2;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin: 0;
+}
+.panel-content > header + p {
+    color: #be1e37;
+    font-size: 14px;
+}
+.panel-content label {
+    font-size: 12px;
+    color: #a09b8c;
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 5px;
+}
+.panel-content .form-control {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    color: #f0e6d2;
+    border-radius: 0;
+    border-color: #785a28;
+    border-width: 1px;
+    border-style: solid;
+    background-color: #1e2328;
+    box-shadow: 0 0 0 1px rgba(0,0,0,0.25) inset, 0 0 0 1px rgba(0,0,0,0.25);
+    display: block;
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+}
+.panel-content .form-control:focus {
+    border-color: #a98f5d;
+    border-image: linear-gradient(to bottom, #785A28, #c8aa6e) 1 stretch;
+    background: linear-gradient(to bottom, #1e2328, #292d30);
+    outline: none;
+}
+.panel-content .Remember {
+    margin: 15px 0;
+}
+.panel-content .Remember .checkbox-image {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    background: url(../images/checkbox-image.png) no-repeat;
+    background-position: 0 0;
+    cursor: pointer;
+    vertical-align: text-bottom;
+    margin-right: 0.4em;
+}
+.panel-content .Remember .checkbox-image:hover {
+    background-position: 0 -14px;
+}
+.panel-content .Remember .checkbox-image.checked {
+    background-position: 0 -28px;
+}
+.panel-content .Remember .checkbox-image.checked:hover {
+    background-position: 0 -42px;
+}
+.panel-content #login-button {
+    font-size: 18px;
+    padding: 0.4em 1em;
+    margin: 0 auto;
+    width: 100%;
+    border-radius: 0;
+    border: 2px solid transparent;
+    border-image: linear-gradient(to top, #0d404c 0%, #0596aa 44%, #0596aa 93%, #0ac8b9 100%);
+    border-image-slice: 1;
+    color: #cdfafa;
+    box-shadow: 0 0 1px 1px #010a13, inset 0 0 1px 1px #010a13;
+    background: #1e2328;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+.panel-content #login-button[disabled],
+.panel-content #login-button[disabled]:hover,
+.panel-content #login-button[disabled]:active {
+    color: #5c5b57;
+    background-color: #1e2328;
+    background-image: none;
+    border-color: #5c5b57;
+    border-image: initial;
+    cursor: default;
+}
+.panel-content #login-button:focus {
+    outline: 0px none;
+}
+.panel-content #login-button:hover {
+    color: #cdfafa;
+    border-image: linear-gradient(to top, #3295c7 0%, #0ac8b9 49%, #cdfafa 100%);
+    border-image-slice: 1;
+    background-image: linear-gradient(to top, rgba(88,83,66,0.5), rgba(30,35,40,0.5));
+}
+.panel-content #login-button:active {
+    border-image: linear-gradient(to top, #0d404c 0%, #0d404c 83%, #0d404c 100%);
+    border-image-slice: 1;
+    color: #0d404c;
+    background: #1e2328;
+}
+.panel-content .submit {
+    margin: 40px auto 20px;
+}
+.panel-content .other {
+    height: 20px;
+    padding-bottom: 60px;
+    border-bottom: thin solid #1e1e1e;
+}
+.panel-content .other a {
+    color: #cdbe91;
+    text-decoration: none;
+    font-size: 12px;
+    display: inline-block;
+}
+.panel-content .other a:hover {
+    text-decoration: underline;
+}
+.panel-content .other a:first-child {
+    float: left;
+}
+.panel-content .other a:last-child {
+    float: right;
+}
+.panel-content form > div:last-child {
+    margin: 20px 0 0 0;
+}
+
+
